@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    // создаем массив
+    let a = 0;
+    let numbers = [];
+    for (let i = 0; i < 11; i++) {
+        numbers.push(a);
+        a++;
+    }
+
+    for (let i = 0; i < numbers.length; i++) {
+        if (numbers[i] === 0) {
+            console.log(numbers [i] + " - это ноль");
+        } else if (numbers[i] % 2 === 0) {
+            console.log(numbers [i] + " - это четное число")
+        } else if (numbers[i] % 2 !== 0) {
+            console.log(numbers [i] + " - это нечетное число")
+        }
+    }
+</script>
+</body>
+</html>

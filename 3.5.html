@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script type="text/javascript">
+    "use strict";
+
+    const products = [
+        {
+            id: 3,
+            price: 127,
+            photos: ["1.jpg", "2.jpg",]
+        },
+        {
+            id: 5,
+            price: 499,
+            photos: []
+        },
+        {
+            id: 10,
+            price: 26,
+            photos: ["3.jpg"]
+        },
+        {
+            id: 8,
+            price: 78,
+        },
+    ];
+
+    function propertyCheck(prop) {
+        for (let i = 0; i < products.length; i++) {
+            products[i].hasOwnProperty(prop);
+            console.log(products[i].hasOwnProperty(prop))
+        }
+    }
+
+    let photos;
+
+    //let newProducts = products.filter(items =>"photos" in items.photos && photos.length > 0);
+    let newProducts = products.filter(function () {
+        return propertyCheck("photos") && photos.length > 0;
+    });
+    сonsole.log(newProducts);
+</script>
+</body>
+</html>
